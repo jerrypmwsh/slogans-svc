@@ -1,0 +1,45 @@
+version: '3'
+services:
+  postgres:
+    image: "postgres:10.3"
+    environment:
+      POSTGRES_USER: 'slogan'
+      POSTGRES_PASSWORD: 'pwd'
+    volumes:
+      - "./postgres:/docker-entrypoint-initdb.d"
+    ports:
+      - "5432:5432"
+  slogansvc:
+    image: "slogansvc:latest"
+    environment:
+      dbname: slogan
+      user: slogan
+      password: pwd
+      host: postgres
+      port: 5432
+      minconn: 1
+      maxconn: 5
+    ports:
+      - "5000:5000"
+    depends_on:
+      - postgres
+    volumes:
+      - svc_sock:/tmp/slogans/
+  nginx:
+    image: "slogansvcnginx:latest"
+    ports:
+      - "8080:80"
+    depends_on:
+      - slogansvc
+    volumes:
+      - svc_sock:/tmp/slogans/
+  nginx_app:
+    image: "nginx:1.13"
+    ports:
+      - "80:80"
+    volumes:
+      - "~/jerrbear/projects/slogans_app:/usr/share/nginx/html"
+
+volumes:
+  svc_sock: {}
+
