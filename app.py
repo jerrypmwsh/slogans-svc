@@ -33,7 +33,9 @@ def get_slogan(s_id):
 @app.route("/slogans", methods=['GET', 'POST', 'PUT'])
 def save_slogan():
     if request.method == 'GET':
-        return jsonify([slogan.__dict__ for slogan in listall_s()])
+        distinct_arg = request.args.get('distinct') 
+        distinct = distinct_arg and distinct_arg.lower() == 'true'
+        return jsonify([slogan.__dict__ for slogan in listall_s(distinct)])
     slogan = json.loads(request.get_json())
     response = upsert_s(slogan)
     return jsonify(response)

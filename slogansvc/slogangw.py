@@ -10,8 +10,8 @@ SOURCE_INFO = 5
 UPDATE_DATE_TIME = 6
 
 
-def listall():
-    results = fetch(LIST)
+def listall(distinct: bool = False):
+    results = fetch(LIST_DISTINCT) if distinct else fetch(LIST)
     return [_slogan(res) for res in results]
 
 
@@ -64,6 +64,19 @@ def _slogan(res):
 
 
 LIST = """SELECT
+    s.id,
+    s.slogan,
+    s.company,
+    c.category,
+    src.source,
+    s.source_info,
+    s.update_date_time
+FROM SLOGAN s LEFT OUTER JOIN CATEGORY c
+ON s.category_id = c.id
+LEFT OUTER JOIN SOURCE src
+ON s.source_id = src.id"""
+
+LIST_DISTINCT = """SELECT DISTINCT ON (s.slogan, s.company)
     s.id,
     s.slogan,
     s.company,

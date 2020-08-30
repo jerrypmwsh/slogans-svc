@@ -1,0 +1,86 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_OUTPUT_FILESEP	slash	/slash or backslash/
+!_TAG_OUTPUT_MODE	u-ctags	/u-ctags or e-ctags/
+!_TAG_PROGRAM_AUTHOR	Universal Ctags Team	//
+!_TAG_PROGRAM_NAME	Universal Ctags	/Derived from Exuberant Ctags/
+!_TAG_PROGRAM_URL	https://ctags.io/	/official site/
+!_TAG_PROGRAM_VERSION	0.0.0	/e0a976d7/
+CATEGORY_ID	slogansvc/slogangw.py	/^CATEGORY_ID = 3$/;"	v
+COMPANY	slogansvc/slogangw.py	/^COMPANY = 2$/;"	v
+Category	slogansvc/category.py	/^class Category:$/;"	c
+DB_KEYS	slogansvc/db.py	/^DB_KEYS = [$/;"	v
+DELETE	slogansvc/categorygw.py	/^DELETE = "DELETE FROM CATEGORY WHERE id = %(c_id)s"$/;"	v
+DELETE	slogansvc/slogangw.py	/^DELETE = "DELETE FROM SLOGAN WHERE id = %(id)s"$/;"	v
+DELETE	slogansvc/sourcegw.py	/^DELETE = "DELETE FROM SOURCE WHERE id = %(src_id)s"$/;"	v
+GET	slogansvc/categorygw.py	/^GET = LIST + " WHERE id = %(id)s"$/;"	v
+GET	slogansvc/slogangw.py	/^GET = LIST + " WHERE s.id = %(id)s"$/;"	v
+GET	slogansvc/sourcegw.py	/^GET = LIST + " WHERE id = %(id)s"$/;"	v
+ID	slogansvc/slogangw.py	/^ID = 0$/;"	v
+INSERT	slogansvc/slogangw.py	/^INSERT = """INSERT INTO SLOGAN ($/;"	v
+LIST	slogansvc/categorygw.py	/^LIST = """SELECT$/;"	v
+LIST	slogansvc/slogangw.py	/^LIST = """SELECT$/;"	v
+LIST	slogansvc/sourcegw.py	/^LIST = """SELECT$/;"	v
+SLOGAN	slogansvc/slogangw.py	/^SLOGAN = 1$/;"	v
+SOURCE_ID	slogansvc/slogangw.py	/^SOURCE_ID = 4$/;"	v
+SOURCE_INFO	slogansvc/slogangw.py	/^SOURCE_INFO = 5$/;"	v
+Slogan	slogansvc/slogan.py	/^class Slogan:$/;"	c
+Source	slogansvc/source.py	/^class Source:$/;"	c
+UPDATE	slogansvc/slogangw.py	/^UPDATE = """UPDATE SLOGAN SET$/;"	v
+UPDATE_DATE_TIME	slogansvc/slogangw.py	/^UPDATE_DATE_TIME = 6$/;"	v
+UPSERT	slogansvc/categorygw.py	/^UPSERT = """INSERT INTO CATEGORY($/;"	v
+UPSERT	slogansvc/sourcegw.py	/^UPSERT = """INSERT INTO SOURCE(source, update_date_time)$/;"	v
+__init__	slogansvc/category.py	/^    def __init__(self, c_id, category, update_date_time):$/;"	m	class:Category
+__init__	slogansvc/slogan.py	/^    def __init__(self, s_id, slogan, company, category, source, source_info, update_date_time):$/;"	m	class:Slogan
+__init__	slogansvc/source.py	/^    def __init__(self, src_id, source, update_date_time):$/;"	m	class:Source
+_db_conf	slogansvc/db.py	/^def _db_conf():$/;"	f
+_slogan	slogansvc/slogangw.py	/^def _slogan(res):$/;"	f
+alter	slogansvc/db.py	/^def alter(query, args=None):$/;"	f
+app	app.py	/^app = Flask(__name__)$/;"	v
+delete	slogansvc/categorygw.py	/^def delete(c_id):$/;"	f
+delete	slogansvc/slogangw.py	/^def delete(s_id):$/;"	f
+delete	slogansvc/sourcegw.py	/^def delete(src_id):$/;"	f
+delete_c	app.py	/^from slogansvc.categorygw import get as get_c, listall as listall_c, upsert as upsert_c, delete /;"	x
+delete_category	app.py	/^def delete_category(c_id):$/;"	f
+delete_s	app.py	/^from slogansvc.slogangw import get as get_s, listall as listall_s, upsert as upsert_s, delete as/;"	x
+delete_slogan	app.py	/^def delete_slogan(s_id):$/;"	f
+delete_source	app.py	/^def delete_source(src_id):$/;"	f
+delete_src	app.py	/^from slogansvc.sourcegw import get as get_src, listall as listall_src, upsert as upsert_src, del/;"	x
+fetch	slogansvc/db.py	/^def fetch(query, args=None):$/;"	f
+get	slogansvc/categorygw.py	/^def get(c_id):$/;"	f
+get	slogansvc/slogangw.py	/^def get(s_id):$/;"	f
+get	slogansvc/sourcegw.py	/^def get(src_id):$/;"	f
+get_c	app.py	/^from slogansvc.categorygw import get as get_c, listall as listall_c, upsert as upsert_c, delete /;"	x
+get_category	app.py	/^def get_category(c_id):$/;"	f
+get_conn	slogansvc/db.py	/^def get_conn():$/;"	f
+get_s	app.py	/^from slogansvc.slogangw import get as get_s, listall as listall_s, upsert as upsert_s, delete as/;"	x
+get_slogan	app.py	/^def get_slogan(s_id):$/;"	f
+get_source	app.py	/^def get_source(src_id):$/;"	f
+get_src	app.py	/^from slogansvc.sourcegw import get as get_src, listall as listall_src, upsert as upsert_src, del/;"	x
+init	slogansvc/db.py	/^def init():$/;"	f
+listall	slogansvc/categorygw.py	/^def listall():$/;"	f
+listall	slogansvc/slogangw.py	/^def listall():$/;"	f
+listall	slogansvc/sourcegw.py	/^def listall():$/;"	f
+listall_c	app.py	/^from slogansvc.categorygw import get as get_c, listall as listall_c, upsert as upsert_c, delete /;"	x
+listall_s	app.py	/^from slogansvc.slogangw import get as get_s, listall as listall_s, upsert as upsert_s, delete as/;"	x
+listall_src	app.py	/^from slogansvc.sourcegw import get as get_src, listall as listall_src, upsert as upsert_src, del/;"	x
+master	app.ini	/^master = true$/;"	k	section:uwsgi
+module	app.ini	/^module = wsgi:app$/;"	k	section:uwsgi
+not_found	app.py	/^def not_found():$/;"	f
+processes	app.ini	/^processes = 5$/;"	k	section:uwsgi
+save_category	app.py	/^def save_category():$/;"	f
+save_slogan	app.py	/^def save_slogan():$/;"	f
+save_sources	app.py	/^def save_sources():$/;"	f
+socket	app.ini	/^chmod-socket = 666$/;"	k	section:uwsgi
+socket	app.ini	/^socket = \/tmp\/slogans\/slogans.sock$/;"	k	section:uwsgi
+term	app.ini	/^die-on-term = true/;"	k	section:uwsgi
+to_category	slogansvc/categorygw.py	/^def to_category(res):$/;"	f
+to_src	slogansvc/sourcegw.py	/^def to_src(res):$/;"	f
+upsert	slogansvc/categorygw.py	/^def upsert(category):$/;"	f
+upsert	slogansvc/slogangw.py	/^def upsert(slogan: dict):$/;"	f
+upsert	slogansvc/sourcegw.py	/^def upsert(src):$/;"	f
+upsert_c	app.py	/^from slogansvc.categorygw import get as get_c, listall as listall_c, upsert as upsert_c, delete /;"	x
+upsert_s	app.py	/^from slogansvc.slogangw import get as get_s, listall as listall_s, upsert as upsert_s, delete as/;"	x
+upsert_src	app.py	/^from slogansvc.sourcegw import get as get_src, listall as listall_src, upsert as upsert_src, del/;"	x
+uwsgi	app.ini	/^[uwsgi]$/;"	s
+vacuum	app.ini	/^vacuum = true$/;"	k	section:uwsgi
